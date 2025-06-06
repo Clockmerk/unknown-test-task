@@ -1,0 +1,12 @@
+@theme {
+	--color-white: #fff;
+
+	--color-black: #0E243A;
+
+	--color-primary: #39B54A;
+
+	--color-primary-active: #50E965;
+
+	--breakpoint-xs: 320px;
+	--breakpoint-xl: 1440px;
+}

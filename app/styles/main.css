@@ -1,0 +1,4 @@
+@import "normalize.css" layer(normalize);
+@import "tailwindcss";
+@import "@nuxt/ui";
+@import "./layers/index.css";

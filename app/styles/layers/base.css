@@ -1,0 +1,34 @@
+@import './theme.css';
+
+@layer base {
+    :root {
+        --ui-color-primary-500: var(--color-primary);
+
+        --ui-color-primary: var(--color-primary);
+    }
+
+    body {
+        @apply font-normal text-black;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+
+    *:disabled {
+        pointer-events: none;
+    }
+
+    span[class^='iconify'] {
+        @apply text-primary;
+    }
+}
+
+@layer utilities {
+    a:hover,
+    a[class^='router-link-active'] {
+        @apply text-primary-active transition-colors;
+    }
+}

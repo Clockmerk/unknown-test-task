@@ -1,0 +1,51 @@
+@use "scss-vars";
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 700;
+	line-height: 110%;
+}
+
+@each $heading in (1, 2, 3, 4, 5) {
+	h#{$heading} {
+		@if $heading == 1 {
+			margin: 0;
+		}
+		@if $heading == 5 {
+			font-weight: 600;
+		}
+
+		
+
+		@include adaptive(0px) {
+			font-size: if($heading == 1 or $heading == 2 or $heading == 3, 26px,
+				if($heading == 4, 18px, 16px));
+		}
+
+		@include adaptiveMd() {
+			@if $heading != 5 {
+				font-size: if($heading == 1, 44px,
+					if($heading == 2, 40px,
+						if($heading == 3, 36px, 24px)));
+			}
+		}
+
+		@include adaptiveXl() {
+			@if $heading == 1 or $heading == 2 {
+				font-size: if($heading == 1, 48px, 44px);
+			}
+		}
+	}
+}
+
+p {
+	line-height: 150%;
+	@include adaptive(0px) {
+		font-size: 14px;
+	}
+	@include adaptiveMd() {
+		font-size: 16px;
+	}
+}

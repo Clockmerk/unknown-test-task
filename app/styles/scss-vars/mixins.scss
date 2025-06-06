@@ -1,0 +1,40 @@
+@use "./breakpoints" as *;
+
+@mixin textOverflow($linesAmount: 1) {
+  display: -webkit-box;
+  line-clamp: $linesAmount;
+  -webkit-line-clamp: $linesAmount;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@mixin adaptive($width) {
+  @media (width >= $width) {
+    @content;
+  }
+}
+
+@mixin adaptiveXs () {
+	@include adaptive($breakpoint-xs) {
+		@content;
+	};
+}
+
+@mixin adaptiveMd () {
+	@include adaptive($breakpoint-md) {
+		@content;
+	};
+}
+
+@mixin adaptiveLg () {
+	@include adaptive($breakpoint-lg) {
+		@content;
+	};
+}
+
+@mixin adaptiveXl () {
+	@include adaptive($breakpoint-xl) {
+		@content;
+	};
+}
