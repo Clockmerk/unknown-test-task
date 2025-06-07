@@ -16,7 +16,7 @@ import { FormSend } from '~/src/features/form-send'
 			flex flex-col gap-16
 			xl:my-[140px]
 			lg:my-30
-			md:mt-16 md:mb-[190px]
+			md:mt-16 md:mb-[100px]
 			max-md:mt-20 max-md:mb-25 px-0
 			"
 		>
