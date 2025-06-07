@@ -24,4 +24,4 @@ npm run dev
 - Nuxt UI
 - Zod
 - Maska
-- vueuse
+- FSD
